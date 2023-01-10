@@ -12,5 +12,7 @@
     <string name="textOnBoarding4">As abelhas trabalhadoras vivem cerca de seis semanas e as abelhas rainhas podem viver até cinco anos!</string>
 
     <string name="textRequest">Pergunte algo</string>
+    <string name="sendButton">Send</string>
+    <string name="settingsButton">Settings</string>
 
 </resources>
