@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ChatBrainy</string>
+    <string name="continue_">Continuar</string>
+
+    <string name="titleOnBoarding1">Vamos começar!</string>
+    <string name="titleOnBoarding2">Como funciona?</string>
+    <string name="titleOnBoarding3">Pergunte o que quiser</string>
+
+    <string name="textOnBoarding1">Pergunte o que quiser e espere uma resposta.</string>
+    <string name="textOnBoarding2">A Inteligência Artificial interage de forma conversacional. O formato de diálogo permite que a IA responda a todo tipo de perguntas.</string>
+    <string name="textOnBoarding3">Me diga uma curiosidade sobre abelhas.</string>
+    <string name="textOnBoarding4">As abelhas trabalhadoras vivem cerca de seis semanas e as abelhas rainhas podem viver até cinco anos!</string>
+
+    <string name="textRequest">Pergunte algo</string>
+
 </resources>
