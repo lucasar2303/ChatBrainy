@@ -1,15 +1,11 @@
 package com.example.chatbrainy
 
-//import okhttp3.logging.HttpLoggingInterceptor
-//import retrofit2.converter.gson.GsonConverterFactory
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.sql.Time
-import java.time.Duration
 import java.util.concurrent.TimeUnit
 
 
@@ -17,6 +13,8 @@ public class ApiModule {
 
     private var sRetrofit: Retrofit? = null
     private val URL = "https://api.openai.com/v1/"
+    val API_KEY = BuildConfig.API_KEY
+
 
     private val sOkHttpClient: OkHttpClient = OkHttpClient.Builder()
         .connectTimeout(10, TimeUnit.SECONDS)
@@ -24,7 +22,7 @@ public class ApiModule {
         .addInterceptor(
             Interceptor { chain ->
                 val request: Request = chain.request().newBuilder()
-                    .addHeader("Authorization", "Bearer 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")
+                    .addHeader("Authorization", API_KEY)
                     .addHeader("Content-Type", "application/json")
                     .addHeader("Connection", "close")
                     .build()
