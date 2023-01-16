@@ -1,4 +1,4 @@
-package com.example.chatbrainy
+package com.example.chatbrainy.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

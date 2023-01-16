@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/hardBlue"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -141,7 +141,7 @@
         android:gravity="start"
         android:padding="20dp"
         android:paddingEnd="50dp"
-        android:text="@string/textOnBoarding4"
+        android:text="@string/textOnBoarding3"
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="20sp"

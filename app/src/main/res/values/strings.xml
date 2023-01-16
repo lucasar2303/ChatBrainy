@@ -8,8 +8,10 @@
 
     <string name="textOnBoarding1">Pergunte o que quiser e espere uma resposta.</string>
     <string name="textOnBoarding2">A Inteligência Artificial interage de forma conversacional. O formato de diálogo permite que a IA responda a todo tipo de perguntas.</string>
-    <string name="textOnBoarding3">Me diga uma curiosidade sobre abelhas.</string>
-    <string name="textOnBoarding4">As abelhas trabalhadoras vivem cerca de seis semanas e as abelhas rainhas podem viver até cinco anos!</string>
+    <string name="textOnBoarding3">Faça qualquer tipo de pergunta! Desde correção gramatical, ideias para projetos, até explicação de códigos de programação.</string>
+
+    <string name="nextOnBoarding1">Iniciar</string>
+    <string name="nextOnBoarding2">Próximo</string>
 
     <string name="textRequest">Pergunte algo</string>
     <string name="sendButton">Send</string>

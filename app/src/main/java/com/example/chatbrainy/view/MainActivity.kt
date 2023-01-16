@@ -1,25 +1,22 @@
-package com.example.chatbrainy
+package com.example.chatbrainy.view
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
+import com.example.chatbrainy.ApiModule
+import com.example.chatbrainy.ApiService
 import com.example.chatbrainy.databinding.ActivityMainBinding
+import com.example.chatbrainy.model.ApiResponse
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.JsonParser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
-import retrofit2.Retrofit
 
 class MainActivity : AppCompatActivity() {
 
