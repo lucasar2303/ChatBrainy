@@ -1,14 +1,13 @@
 package com.example.chatbrainy.view
 
 import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatbrainy.ApiModule
@@ -26,6 +25,7 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -40,31 +40,46 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        recyclerView = binding.recyclerMain
-        val layoutManager = LinearLayoutManager(this)
-        layoutManager.isSmoothScrollbarEnabled = true
-        recyclerView?.layoutManager = layoutManager
+        //Config RecyclerView
+        configRecycler()
+
+        //Adjust view keyboard open
+        if (Build.VERSION.SDK_INT >= 11) {
+            recyclerView!!.addOnLayoutChangeListener { v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom ->
+                if (bottom < oldBottom) {
+                    recyclerView!!.scrollBy(0, oldBottom - bottom);
+                }
+            }
+        }
+
 
         binding.btnSend.setOnClickListener{
             var textSend = binding.etMessage.text.toString()
 
+            //checks if at least one word of more than 3 letters was typed
             if (textSend.length<=3){
                 Toast.makeText(applicationContext, "Digite uma frase", Toast.LENGTH_SHORT).show()
             }else{
                 binding.etMessage.setText("")
 
+                // Creating request item for list
                 var chatMessage = Chat()
                 chatMessage.response = false
                 chatMessage.answer = textSend
 
+                // Adding item to list and updating recycler
                 items.add(chatMessage)
+                callRecycler()
 
+                // Hiding keyboard
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
-                callRecycler()
+
+                // Positioning to the last item added
                 lastItem = items.size
                 recyclerView?.smoothScrollToPosition(lastItem!!)
 
+                // request API
                 rawJSON(textSend)
             }
 
@@ -75,8 +90,8 @@ class MainActivity : AppCompatActivity() {
 
     fun rawJSON(text: String) {
 
-        binding.progressBar2.visibility = View.VISIBLE
-        binding.btnSend.visibility = View.GONE
+        // Showing loading
+        showLoading(true)
 
         // Create Retrofit
         val retrofit = ApiModule().getRetrofit()
@@ -94,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         // Convert JSONObject to String
         val jsonObjectString = jsonObject.toString()
 
-        // Create RequestBody ( We're not using any converter, like GsonConverter, MoshiConverter e.t.c, that's why we use RequestBody )
+        // Create RequestBody
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
 
         CoroutineScope(Dispatchers.IO).launch {
@@ -108,31 +123,38 @@ class MainActivity : AppCompatActivity() {
                         // Convert raw JSON to object using GSON library
                         val apiResponse = Gson().fromJson(response?.body()?.string(), ApiResponse::class.java)
                         Log.d("Pretty Printed JSON :", apiResponse.choices?.get(0)?.text.toString())
+
+                        // Creating response item for list
                         var chatResponse = Chat()
                         chatResponse.response = true
                         chatResponse.apiResponse = apiResponse
 
+                        // Adding item to list and updating recycler
                         items.add(chatResponse)
                         callRecycler()
 
+                        // Positioning to the last item added
                         lastItem = items.size
                         recyclerView?.smoothScrollToPosition(lastItem!!)
 
-                        binding.progressBar2.visibility = View.GONE
-                        binding.btnSend.visibility = View.VISIBLE
+                        // Showing send button
+                        showLoading(false)
+
 
                     } else {
                         Log.e("RETROFIT_ERROR", response?.code().toString())
 
+                        // Creating error item for list
                         var chatMessage = Chat()
                         chatMessage.response = false
                         chatMessage.answer = "Erro ao encontrar resposta, se continuar a ter essa mensagem, entre em contato com o desenvolvedor"
 
+                        // Adding item to list and updating recycler
                         items.add(chatMessage)
                         callRecycler()
 
-                        binding.progressBar2.visibility = View.GONE
-                        binding.btnSend.visibility = View.VISIBLE
+                        // Showing send button
+                        showLoading(false)
 
                     }
                 }
@@ -142,8 +164,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun callRecycler(){
+        //updating recycler
         adapter = ResponseMainAdapter(items)
         recyclerView?.adapter = adapter
+    }
+
+    fun showLoading(aux: Boolean){
+        if (aux){
+            binding.progressBar2.visibility = View.VISIBLE
+            binding.btnSend.visibility = View.GONE
+        }else{
+            binding.progressBar2.visibility = View.GONE
+            binding.btnSend.visibility = View.VISIBLE
+        }
+    }
+
+    fun configRecycler(){
+        recyclerView = binding.recyclerMain
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.isSmoothScrollbarEnabled = true
+        layoutManager.stackFromEnd = true
+        recyclerView?.layoutManager = layoutManager
     }
 
 

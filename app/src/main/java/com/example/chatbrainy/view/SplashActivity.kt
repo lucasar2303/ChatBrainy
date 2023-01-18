@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
+        // Showing splashscreen and next screen
         Handler().postDelayed({
             if (restorePrefData()){
                 startActivity(Intent(this, MainActivity::class.java))
@@ -34,6 +34,7 @@ class SplashActivity : AppCompatActivity() {
         },2000)
     }
 
+    // Check onboarding
     private fun restorePrefData(): Boolean{
         sharedPreferences = applicationContext.getSharedPreferences("pref", Context.MODE_PRIVATE)
         return sharedPreferences!!.getBoolean("FirstTimeOnBoarding", false)
