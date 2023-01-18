@@ -26,7 +26,6 @@ class ResponseMainAdapter(val items: List<Chat>): RecyclerView.Adapter<ResponseM
 
         val item = items[position]
 
-
         val scale: Float = Resources.getSystem().displayMetrics.density
         val dp20 = (20 * scale + 0.5f)
         val dp100 = (100 * scale + 0.5f)
@@ -35,17 +34,23 @@ class ResponseMainAdapter(val items: List<Chat>): RecyclerView.Adapter<ResponseM
             holder.layout.setBackgroundColor(ContextCompat.getColor(holder.rootView.context, R.color.cleanBlue))
 
             var textResponse = item.apiResponse?.choices?.get(0)?.text
-            var stringSplice = textResponse?.split("\n\n")
 
-            var stringChange : String? =""
-            for (i in 1 until stringSplice!!.size){
-                if (i != 1){
-                    stringChange = stringChange+"\n\n"+stringSplice[i]
-                }else{
-                    stringChange = stringChange+stringSplice[i]
+            if(textResponse ==null || textResponse==""){
+                holder.tvText.text="Digite novamente"
+            }else{
+                var stringSplice = textResponse?.split("\n\n")
+
+                var stringChange : String? =""
+                for (i in 1 until stringSplice!!.size){
+                    if (i != 1){
+                        stringChange = stringChange+"\n\n"+stringSplice[i]
+                    }else{
+                        stringChange = stringChange+stringSplice[i]
+                    }
                 }
+                holder.tvText.text=stringChange
             }
-            holder.tvText.text=stringChange
+
 
             holder.tvText.setPadding(dp20.toInt(),0,dp100.toInt(),0)
             holder.tvText.textAlignment=View.TEXT_ALIGNMENT_TEXT_START
@@ -53,8 +58,6 @@ class ResponseMainAdapter(val items: List<Chat>): RecyclerView.Adapter<ResponseM
         }else{
             holder.tvText.text = item.answer
         }
-
-        //  binding.response.setText(apiResponse.choices?.get(0)?.text.toString()) RESPOSTAAAAAAAAAAAAAAAAAAAAAAAAA
 
     }
 

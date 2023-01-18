@@ -1,9 +1,12 @@
 package com.example.chatbrainy.view
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
+import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         layoutManager.isSmoothScrollbarEnabled = true
         recyclerView?.layoutManager = layoutManager
 
-
         binding.btnSend.setOnClickListener{
             var textSend = binding.etMessage.text.toString()
 
@@ -72,6 +74,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun rawJSON(text: String) {
+
+        binding.progressBar2.visibility = View.VISIBLE
+        binding.btnSend.visibility = View.GONE
 
         // Create Retrofit
         val retrofit = ApiModule().getRetrofit()
@@ -113,8 +118,22 @@ class MainActivity : AppCompatActivity() {
                         lastItem = items.size
                         recyclerView?.smoothScrollToPosition(lastItem!!)
 
+                        binding.progressBar2.visibility = View.GONE
+                        binding.btnSend.visibility = View.VISIBLE
+
                     } else {
                         Log.e("RETROFIT_ERROR", response?.code().toString())
+
+                        var chatMessage = Chat()
+                        chatMessage.response = false
+                        chatMessage.answer = "Erro ao encontrar resposta, se continuar a ter essa mensagem, entre em contato com o desenvolvedor"
+
+                        items.add(chatMessage)
+                        callRecycler()
+
+                        binding.progressBar2.visibility = View.GONE
+                        binding.btnSend.visibility = View.VISIBLE
+
                     }
                 }
 
@@ -125,9 +144,6 @@ class MainActivity : AppCompatActivity() {
     fun callRecycler(){
         adapter = ResponseMainAdapter(items)
         recyclerView?.adapter = adapter
-
-
-
     }
 
 
