@@ -31,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
                 finish()
             }
 
-        },2000)
+        },100)
     }
 
     // Check onboarding

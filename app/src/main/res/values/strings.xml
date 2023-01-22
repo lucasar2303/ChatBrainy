@@ -17,4 +17,17 @@
     <string name="sendButton">Send</string>
     <string name="settingsButton">Settings</string>
 
+
+    <string name="settings">Configurações</string>
+    <string name="chat">Chat</string>
+    <string name="about">Sobre</string>
+    <string name="policy">Politica de uso</string>
+    <string name="help">Ajuda</string>
+
+    <string name="aboutText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet purus ac hendrerit mattis. In metus nunc, hendrerit nec nunc sit amet, vulputate porta justo. Aliquam rutrum lorem elementum libero lobortis tempus. Donec at volutpat risus. Nullam dictum lobortis arcu at pulvinar. Aliquam non velit in tellus vestibulum feugiat. Phasellus semper lobortis mattis.
+
+Morbi eu felis non sapien convallis tristique ut et nibh. Ut ut velit tortor. Aliquam placerat, tortor in convallis congue, turpis velit tincidunt ante, vitae placerat nisl nunc sed mauris. Maecenas rhoncus nec lectus ac viverra. Vivamus hendrerit ipsum sed turpis auctor, eu pretium ipsum varius. Integer a enim tincidunt, finibus tellus nec, faucibus urna.</string>
+
+
+
 </resources>

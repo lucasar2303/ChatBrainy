@@ -1,6 +1,7 @@
 package com.example.chatbrainy.view
 
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -50,6 +51,10 @@ class MainActivity : AppCompatActivity() {
                     recyclerView!!.scrollBy(0, oldBottom - bottom);
                 }
             }
+        }
+
+        binding.btnSettings.setOnClickListener{
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
 
 
