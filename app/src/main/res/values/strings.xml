@@ -24,9 +24,29 @@
     <string name="policy">Politica de uso</string>
     <string name="help">Ajuda</string>
 
-    <string name="aboutText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet purus ac hendrerit mattis. In metus nunc, hendrerit nec nunc sit amet, vulputate porta justo. Aliquam rutrum lorem elementum libero lobortis tempus. Donec at volutpat risus. Nullam dictum lobortis arcu at pulvinar. Aliquam non velit in tellus vestibulum feugiat. Phasellus semper lobortis mattis.
+    <string name="aboutText">
+        Somos uma empresa que acredita na criação de soluções inovadoras e de qualidade para nossos clientes.
+        Estamos sempre à procura de novas tecnologias para melhorar a experiência de nossos usuários.\n\n
 
-Morbi eu felis non sapien convallis tristique ut et nibh. Ut ut velit tortor. Aliquam placerat, tortor in convallis congue, turpis velit tincidunt ante, vitae placerat nisl nunc sed mauris. Maecenas rhoncus nec lectus ac viverra. Vivamus hendrerit ipsum sed turpis auctor, eu pretium ipsum varius. Integer a enim tincidunt, finibus tellus nec, faucibus urna.</string>
+        No desenvolvimento desse aplicativo, utilizamos uma das tecnologias da OpenAI, o ChatGPT.\n\n
+
+        Esta tecnologia nos permite criar chatbots inteligentes que podem ajudar os usuários a encontrar as respostas que precisam de maneira mais eficiente.\n\n
+        Segundo a OpenAI, treinaram o modelo usando Reinforcement Learning from Human Feedback (RLHF), usando os mesmos métodos do InstructGPT,
+        mas com pequenas diferenças na configuração da coleta de dados.\n\n
+
+        Para mais informações, acesse: https://openai.com/blog/chatgpt/\n\n
+
+        Se você estiver interessado em saber mais sobre como usamos a tecnologia de inteligência artificial da OpenAI ChatGPT,
+        entre em contato conosco, estamos sempre prontos para ajudar!</string>
+
+    <string name="helptext">
+        Para melhor desempenho da ferramenta, aqui estão algumas dicas para se usar.\n\n
+        Seja claro e objetivo com seu texto de entrada.\n\n
+        Utilize pontuações e acentuação para que a Inteligência Artificial compreenda o que você quer dizer.\n\n
+        Algumas solicitações que aparentam ser mais complexas podem levar mais tempo até retornar a resposta.\n\n
+        Sempre confira se as informações são verdadeiras antes de compartilhar com alguém.\n\n
+        No caso de erros frequentes, entre em contato com o desenvolvedor.
+    </string>
 
 
 

@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         val jsonObject = JSONObject()
         jsonObject.put("model", "text-davinci-003")
         jsonObject.put("prompt", text)
-        jsonObject.put("max_tokens", 250)
+        jsonObject.put("max_tokens", 2048)
         jsonObject.put("temperature", 0.6)
 
         // Convert JSONObject to String
@@ -152,7 +152,7 @@ class MainActivity : AppCompatActivity() {
                         // Creating error item for list
                         var chatMessage = Chat()
                         chatMessage.response = false
-                        chatMessage.answer = "Erro ao encontrar resposta, se continuar a ter essa mensagem, entre em contato com o desenvolvedor"
+                        chatMessage.answer = "Erro ao encontrar resposta, tente novamente. Se continuar a ter essa mensagem, entre em contato com o desenvolvedor."
 
                         // Adding item to list and updating recycler
                         items.add(chatMessage)
