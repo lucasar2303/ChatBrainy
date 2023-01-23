@@ -57,6 +57,19 @@ class SettingsMenuFragment : Fragment() {
 
         }
 
+        view.findViewById<TextView>(R.id.tvPolicy).setOnClickListener{
+            val manager:FragmentManager = activity?.supportFragmentManager!!
+            val nextFragment:Fragment = PolicyFragment()
+            manager.beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right, R.anim.enter_right_to_left, R.anim.exit_right_to_left)
+                .replace(R.id.fragmentContainerView, nextFragment)
+                .addToBackStack(null)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit()
+
+        }
+
+
+
         view.findViewById<ImageButton>(R.id.btnBack).setOnClickListener{
             activity?.finish()
         }

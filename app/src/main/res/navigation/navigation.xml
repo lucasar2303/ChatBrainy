@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_settingsMenuFragment_to_helpFragment"
             app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_settingsMenuFragment_to_policyFragment"
+            app:destination="@id/policyFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -33,6 +36,15 @@
         tools:layout="@layout/fragment_help" >
         <action
             android:id="@+id/action_helpFragment_to_settingsMenuFragment"
+            app:destination="@id/settingsMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyFragment"
+        android:name="com.example.chatbrainy.PolicyFragment"
+        android:label="fragment_policy"
+        tools:layout="@layout/fragment_policy" >
+        <action
+            android:id="@+id/action_policyFragment_to_settingsMenuFragment"
             app:destination="@id/settingsMenuFragment" />
     </fragment>
 </navigation>

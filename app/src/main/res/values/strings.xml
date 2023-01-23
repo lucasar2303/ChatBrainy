@@ -25,27 +25,14 @@
     <string name="help">Ajuda</string>
 
     <string name="aboutText">
-        Somos uma empresa que acredita na criação de soluções inovadoras e de qualidade para nossos clientes.
-        Estamos sempre à procura de novas tecnologias para melhorar a experiência de nossos usuários.\n\n
-
-        No desenvolvimento desse aplicativo, utilizamos uma das tecnologias da OpenAI, o ChatGPT.\n\n
-
-        Esta tecnologia nos permite criar chatbots inteligentes que podem ajudar os usuários a encontrar as respostas que precisam de maneira mais eficiente.\n\n
-        Segundo a OpenAI, treinaram o modelo usando Reinforcement Learning from Human Feedback (RLHF), usando os mesmos métodos do InstructGPT,
-        mas com pequenas diferenças na configuração da coleta de dados.\n\n
-
-        Para mais informações, acesse: https://openai.com/blog/chatgpt/\n\n
-
-        Se você estiver interessado em saber mais sobre como usamos a tecnologia de inteligência artificial da OpenAI ChatGPT,
-        entre em contato conosco, estamos sempre prontos para ajudar!</string>
+        Somos uma empresa que acredita na criação de soluções inovadoras e de qualidade para nossos clientes. Estamos sempre à procura de novas tecnologias para melhorar a experiência de nossos usuários.\n\nNo desenvolvimento desse aplicativo, utilizamos uma das tecnologias da OpenAI, o ChatGPT.\n\nEsta tecnologia nos permite criar chatbots inteligentes que podem ajudar os usuários a encontrar as respostas que precisam de maneira mais eficiente.\n\nSegundo a OpenAI, treinaram o modelo usando Reinforcement Learning from Human Feedback (RLHF), usando os mesmos métodos do InstructGPT,mas com pequenas diferenças na configuração da coleta de dados.\n\nPara mais informações, acesse: \nhttps://openai.com/blog/chatgpt/\n\nSe você estiver interessado em saber mais sobre como usamos a tecnologia de inteligência artificial da OpenAI ChatGPT,entre em contato conosco, estamos sempre prontos para ajudar!</string>
 
     <string name="helptext">
-        Para melhor desempenho da ferramenta, aqui estão algumas dicas para se usar.\n\n
-        Seja claro e objetivo com seu texto de entrada.\n\n
-        Utilize pontuações e acentuação para que a Inteligência Artificial compreenda o que você quer dizer.\n\n
-        Algumas solicitações que aparentam ser mais complexas podem levar mais tempo até retornar a resposta.\n\n
-        Sempre confira se as informações são verdadeiras antes de compartilhar com alguém.\n\n
-        No caso de erros frequentes, entre em contato com o desenvolvedor.
+        Para melhor desempenho da ferramenta, aqui estão algumas dicas para se usar.\n\nSeja claro e objetivo com seu texto de entrada.\n\nUtilize pontuações e acentuação para que a Inteligência Artificial compreenda o que você quer dizer.\n\nAlgumas solicitações que aparentam ser mais complexas podem levar mais tempo até retornar a resposta.\n\nSempre confira se as informações são verdadeiras antes de compartilhar com alguém.\n\nNo caso de erros frequentes, entre em contato com o desenvolvedor.
+    </string>
+
+    <string name="policytext">
+        A nossa plataforma é destinada ao uso de conteúdo de forma responsável e amigável. Não é permitido o uso da plataforma para gerar os seguintes tipos de conteúdo:\n\nÓdio:\nConteúdo que expressa, incita ou promove o ódio com base na identidade\n\nAssédio:\nConteúdo que pretende assediar, ameaçar ou intimidar um indivíduo\n\nViolência:\nConteúdo que promova ou glorifique a violência ou celebre o sofrimento ou a humilhação de outras pessoas\n\nAuto-mutilação:\nConteúdo que promova, encoraje ou retrate atos de autoagressão, como suicídio, corte e distúrbios alimentares\n\nSexual:\nConteúdo destinado a despertar excitação sexual, como a descrição de atividade sexual ou que promova serviços sexuais (excluindo educação sexual e bem-estar)\n\nPolítico:\nConteúdo que tenta influenciar o processo político ou ser usado para fins de campanha\n\nSpam:\nConteúdo em massa não solicitado\n\nDecepção:\nConteúdo falso ou enganoso, como tentativa de fraudar indivíduos ou espalhar desinformação\n\nMalware:\nConteúdo que tenta gerar ransomware, keyloggers, vírus ou outro software destinado a impor algum nível de dano\n\nA violação dessa política pode resultar em sanções, incluindo, mas não limitadas, à suspensão ou cancelamento da conta.
     </string>
 
 
