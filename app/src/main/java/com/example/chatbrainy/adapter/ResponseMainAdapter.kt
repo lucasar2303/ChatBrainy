@@ -1,13 +1,19 @@
 package com.example.chatbrainy.adapter
 
 import android.annotation.SuppressLint
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatbrainy.R
 import com.example.chatbrainy.model.Chat
@@ -49,6 +55,12 @@ class ResponseMainAdapter(val items: List<Chat>): RecyclerView.Adapter<ResponseM
                     }
                 }
                 holder.tvText.text=stringChange
+                holder.btnCopy.setOnClickListener{
+                    val myClipboard = holder.rootView.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                    val clipData = ClipData.newPlainText("", stringChange)
+                    myClipboard.setPrimaryClip(clipData)
+                    Toast.makeText(holder.rootView.context.applicationContext, "Copiado para área de transferência", Toast.LENGTH_SHORT).show()
+                }
             }
 
 
@@ -56,8 +68,11 @@ class ResponseMainAdapter(val items: List<Chat>): RecyclerView.Adapter<ResponseM
             holder.tvText.textAlignment=View.TEXT_ALIGNMENT_TEXT_START
 
         }else{
+            holder.btnCopy.visibility = View.GONE
             holder.tvText.text = item.answer
         }
+
+
 
     }
 
@@ -69,6 +84,7 @@ class ResponseMainAdapter(val items: List<Chat>): RecyclerView.Adapter<ResponseM
         val rootView = itemView
         val layout = itemView.findViewById<ConstraintLayout>(R.id.layoutRecycler)
         val tvText = itemView.findViewById<TextView>(R.id.tvTextRecycler)
+        val btnCopy = itemView.findViewById<ImageButton>(R.id.btnCopy)
     }
 
 }
