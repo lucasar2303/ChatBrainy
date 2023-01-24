@@ -1,4 +1,4 @@
-package com.example.chatbrainy
+package com.example.chatbrainy.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.*
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.FragmentNavigator
-import com.example.chatbrainy.view.SettingsActivity
+import com.example.chatbrainy.R
 
 
 class SettingsMenuFragment : Fragment() {
@@ -38,7 +36,12 @@ class SettingsMenuFragment : Fragment() {
         view.findViewById<TextView>(R.id.tvAbout).setOnClickListener{
             val manager:FragmentManager = activity?.supportFragmentManager!!
             val nextFragment:Fragment = AboutFragment()
-            manager.beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right, R.anim.enter_right_to_left, R.anim.exit_right_to_left)
+            manager.beginTransaction().setCustomAnimations(
+                R.anim.enter_left_to_right,
+                R.anim.exit_left_to_right,
+                R.anim.enter_right_to_left,
+                R.anim.exit_right_to_left
+            )
                 .replace(R.id.fragmentContainerView, nextFragment)
                 .addToBackStack(null)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
@@ -49,7 +52,12 @@ class SettingsMenuFragment : Fragment() {
         view.findViewById<TextView>(R.id.tvHelp).setOnClickListener{
             val manager:FragmentManager = activity?.supportFragmentManager!!
             val nextFragment:Fragment = HelpFragment()
-            manager.beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right, R.anim.enter_right_to_left, R.anim.exit_right_to_left)
+            manager.beginTransaction().setCustomAnimations(
+                R.anim.enter_left_to_right,
+                R.anim.exit_left_to_right,
+                R.anim.enter_right_to_left,
+                R.anim.exit_right_to_left
+            )
                 .replace(R.id.fragmentContainerView, nextFragment)
                 .addToBackStack(null)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
@@ -60,7 +68,28 @@ class SettingsMenuFragment : Fragment() {
         view.findViewById<TextView>(R.id.tvPolicy).setOnClickListener{
             val manager:FragmentManager = activity?.supportFragmentManager!!
             val nextFragment:Fragment = PolicyFragment()
-            manager.beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right, R.anim.enter_right_to_left, R.anim.exit_right_to_left)
+            manager.beginTransaction().setCustomAnimations(
+                R.anim.enter_left_to_right,
+                R.anim.exit_left_to_right,
+                R.anim.enter_right_to_left,
+                R.anim.exit_right_to_left
+            )
+                .replace(R.id.fragmentContainerView, nextFragment)
+                .addToBackStack(null)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit()
+
+        }
+
+        view.findViewById<TextView>(R.id.tvChat).setOnClickListener{
+            val manager:FragmentManager = activity?.supportFragmentManager!!
+            val nextFragment:Fragment = ChatConfigFragment()
+            manager.beginTransaction().setCustomAnimations(
+                R.anim.enter_left_to_right,
+                R.anim.exit_left_to_right,
+                R.anim.enter_right_to_left,
+                R.anim.exit_right_to_left
+            )
                 .replace(R.id.fragmentContainerView, nextFragment)
                 .addToBackStack(null)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)

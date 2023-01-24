@@ -1,4 +1,4 @@
-package com.example.chatbrainy
+package com.example.chatbrainy.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import com.example.chatbrainy.R
 
-
-class PolicyFragment : Fragment() {
+class HelpFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +21,7 @@ class PolicyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_policy, container, false)
+        val view = inflater.inflate(R.layout.fragment_help, container, false)
 
         view.findViewById<ImageButton>(R.id.btnBack).setOnClickListener{
             activity?.supportFragmentManager?.popBackStack()
@@ -35,7 +35,7 @@ class PolicyFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            PolicyFragment().apply {
+            HelpFragment().apply {
                 arguments = Bundle().apply {
                 }
             }

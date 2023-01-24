@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/hardBlue"
-    tools:context=".SettingsMenuFragment">
+    tools:context=".view.fragments.SettingsMenuFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

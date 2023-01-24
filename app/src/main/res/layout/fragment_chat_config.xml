@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hardBlue"
+    tools:context=".view.fragments.ChatConfigFragment">
+
+
+    <TextView
+        android:id="@+id/tvSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/chat"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cleanBlue"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSettings" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/hardBlue"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/model"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvSettings"
+        app:layout_constraintTop_toBottomOf="@+id/viewLine" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvModel" />
+
+    <TextView
+        android:id="@+id/tvTextModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/noto_sans"
+        android:text=""
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/temperature"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:drawableEnd="@drawable/ic_help_text"
+        android:drawablePadding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tvSettings"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextModel" />
+
+    <TextView
+        android:id="@+id/tvTempValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans"
+        android:text="0.7"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTemperature"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/tvTemperature" />
+
+    <SeekBar
+        android:id="@+id/seekBarTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:progressBackgroundTint="@color/cleanBlue"
+        android:progressBackgroundTintMode="src_over"
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTemperature" />
+
+
+    <TextView
+        android:id="@+id/tvLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/maximum_length"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:drawableEnd="@drawable/ic_help_text"
+        android:drawablePadding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tvSettings"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTemp" />
+
+    <TextView
+        android:id="@+id/tvLengthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans"
+        android:text="250"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLength"
+        app:layout_constraintEnd_toEndOf="@+id/tvTempValue"
+        app:layout_constraintTop_toTopOf="@+id/tvLength" />
+
+    <SeekBar
+        android:id="@+id/seekBarLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:progressBackgroundTint="@color/cleanBlue"
+        android:progressBackgroundTintMode="src_over"
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLength" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_reset"
+        android:background="@drawable/btn_style"
+        app:backgroundTint="@color/cleanBlue"
+        android:textAllCaps="false"
+        android:fontFamily="@font/noto_sans"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        android:background="@drawable/btn_style"
+        app:backgroundTint="@color/cleanBlue"
+        android:textAllCaps="false"
+        android:fontFamily="@font/noto_sans"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReset"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

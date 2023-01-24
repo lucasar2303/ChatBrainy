@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/settingsMenuFragment"
-        android:name="com.example.chatbrainy.SettingsMenuFragment"
+        android:name="com.example.chatbrainy.view.fragments.SettingsMenuFragment"
         android:label="fragment_settings_menu"
         tools:layout="@layout/fragment_settings_menu" >
         <action
@@ -19,10 +19,13 @@
         <action
             android:id="@+id/action_settingsMenuFragment_to_policyFragment"
             app:destination="@id/policyFragment" />
+        <action
+            android:id="@+id/action_settingsMenuFragment_to_chatConfigFragment"
+            app:destination="@id/chatConfigFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.chatbrainy.AboutFragment"
+        android:name="com.example.chatbrainy.view.fragments.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" >
         <action
@@ -31,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
-        android:name="com.example.chatbrainy.HelpFragment"
+        android:name="com.example.chatbrainy.view.fragments.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" >
         <action
@@ -40,11 +43,20 @@
     </fragment>
     <fragment
         android:id="@+id/policyFragment"
-        android:name="com.example.chatbrainy.PolicyFragment"
+        android:name="com.example.chatbrainy.view.fragments.PolicyFragment"
         android:label="fragment_policy"
         tools:layout="@layout/fragment_policy" >
         <action
             android:id="@+id/action_policyFragment_to_settingsMenuFragment"
+            app:destination="@id/settingsMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatConfigFragment"
+        android:name="com.example.chatbrainy.view.fragments.ChatConfigFragment"
+        android:label="fragment_chat_config"
+        tools:layout="@layout/fragment_chat_config" >
+        <action
+            android:id="@+id/action_chatConfigFragment_to_settingsMenuFragment"
             app:destination="@id/settingsMenuFragment" />
     </fragment>
 </navigation>

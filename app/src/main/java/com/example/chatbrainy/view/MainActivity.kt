@@ -2,6 +2,7 @@ package com.example.chatbrainy.view
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -34,12 +35,16 @@ class MainActivity : AppCompatActivity() {
     var recyclerView:RecyclerView? = null
     var adapter:ResponseMainAdapter? = null
     var lastItem:Int? = 0
+    var sharedPreferences: SharedPreferences? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedPreferences = applicationContext?.getSharedPreferences("pref", Context.MODE_PRIVATE)
+
 
         //Config RecyclerView
         configRecycler()
@@ -106,10 +111,10 @@ class MainActivity : AppCompatActivity() {
 
         // Create JSON using JSONObject
         val jsonObject = JSONObject()
-        jsonObject.put("model", "text-davinci-003")
+        jsonObject.put("model", sharedPreferences!!.getString("model", "text-davinci-003"))
         jsonObject.put("prompt", text)
-        jsonObject.put("max_tokens", 2048)
-        jsonObject.put("temperature", 0.6)
+        jsonObject.put("max_tokens", sharedPreferences!!.getInt("max_tokens", 250))
+        jsonObject.put("temperature", sharedPreferences!!.getFloat("temperature", 0.7F))
 
         // Convert JSONObject to String
         val jsonObjectString = jsonObject.toString()
