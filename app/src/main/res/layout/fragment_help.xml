@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:fontFamily="@font/noto_sans"
-                android:text="@string/aboutText"
+                android:text="@string/helptext"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"

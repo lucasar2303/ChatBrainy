@@ -59,7 +59,7 @@ class ResponseMainAdapter(val items: List<Chat>): RecyclerView.Adapter<ResponseM
                     val myClipboard = holder.rootView.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                     val clipData = ClipData.newPlainText("", stringChange)
                     myClipboard.setPrimaryClip(clipData)
-                    Toast.makeText(holder.rootView.context.applicationContext, "Copiado para área de transferência", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(holder.rootView.context.applicationContext, "Mensagem copiada", Toast.LENGTH_SHORT).show()
                 }
             }
 

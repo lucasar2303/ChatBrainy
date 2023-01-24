@@ -27,15 +27,15 @@ class OnBoardingViewPagerAdapter(private var context: Context, private var onBoa
         val view = LayoutInflater.from(context).inflate(R.layout.onboarding_screen_layout, null)
         val title: TextView
         val desc: TextView
-        val image: ImageView
+       // val image: ImageView
 
         title = view.findViewById(R.id.title)
         desc = view.findViewById(R.id.desc)
-        image = view.findViewById(R.id.imageView)
+       // image = view.findViewById(R.id.imageView)
 
         title.text = onBoardingDataList[position].title
         desc.text = onBoardingDataList[position].desc
-        image.setImageResource(onBoardingDataList[position].image)
+       // image.setImageResource(onBoardingDataList[position].image)
 
 
 
