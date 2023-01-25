@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SignupActivity"
+    android:background="@color/hardBlue">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/hardBlue"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/createAccount"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="157dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="60dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        android:textColorHint="@color/gray"
+        app:boxBackgroundColor="@color/hardBlue"
+        app:boxStrokeColor="@color/cleanBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintname"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_account"
+            android:drawablePadding="10dp"
+            android:inputType="textNoSuggestions"
+            android:padding="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:boxBackgroundColor="@color/hardBlue"
+        app:boxStrokeColor="@color/cleanBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutName">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintemail"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:boxBackgroundColor="@color/hardBlue"
+        app:boxStrokeColor="@color/cleanBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:id="@+id/etCelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintphone"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:padding="15dp"
+            app:mask="(__) _ ____-____"
+            app:maskCharacter="_"
+            app:maskStyle="completable" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        style="@style/FilledBoxEndIconTint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:boxBackgroundColor="@color/hardBlue"
+        app:boxStrokeColor="@color/cleanBlue"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPhone"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintpassword"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutConfirmPassword"
+        style="@style/FilledBoxEndIconTint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:boxBackgroundColor="@color/hardBlue"
+        app:boxStrokeColor="@color/cleanBlue"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPassword"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintconfirmpassword"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/btn_form_login"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/btnSignup"
+        android:textColor="@color/cleanBlue"
+        android:textFontWeight="1000"
+        android:textSize="16sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutConfirmPassword" />
+
+    <TextView
+        android:id="@+id/tvtextSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/txtSignin"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSignup"
+        app:layout_constraintEnd_toStartOf="@+id/btnSignup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnSignup" />
+
+    <TextView
+        android:id="@+id/btnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:fontFamily="@font/noto_sans"
+        android:text="@string/btnSignin"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvtextSignup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "64695937579",
+    "project_id": "chatbrainy",
+    "storage_bucket": "chatbrainy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64695937579:android:104a68a3d544503eea586e",
+        "android_client_info": {
+          "package_name": "com.example.chatbrainy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64695937579-unnroruae34jf691at4hm0kiojl6dhrm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatbrainy",
+            "certificate_hash": "7ce1fc1a9459335c630af78cad9e5198c5cf3ee9"
+          }
+        },
+        {
+          "client_id": "64695937579-6g7tqr6431sbms20ap5iqu01l7d5dc49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNNwJ_r0kKffW2m_e9jQnxSPBqapmJM_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64695937579-6g7tqr6431sbms20ap5iqu01l7d5dc49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

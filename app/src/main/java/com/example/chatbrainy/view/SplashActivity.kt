@@ -24,7 +24,7 @@ class SplashActivity : AppCompatActivity() {
         // Showing splashscreen and next screen
         Handler().postDelayed({
             if (restorePrefData()){
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
                 finish()
             }else{
                 startActivity(Intent(this, OnBoardingActivity::class.java))

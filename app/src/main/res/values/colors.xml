@@ -10,4 +10,5 @@
     <color name="hardBlue">#161A24</color>
     <color name="cleanBlue">#252C3D</color>
     <color name="gray">#666666</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#252c3d</color>
 </resources>
