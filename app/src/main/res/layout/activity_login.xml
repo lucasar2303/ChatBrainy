@@ -70,7 +70,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutSenha"
+        android:id="@+id/layoutPassword"
         style="@style/FilledBoxEndIconTint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
         app:passwordToggleEnabled="true">
 
         <EditText
-            android:id="@+id/etSenha"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hintpassword"
@@ -115,7 +115,7 @@
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/layoutPassword" />
 
     <TextView
         android:id="@+id/btnForget"
@@ -162,5 +162,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvtextSignup" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogo" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTintMode="src_atop"
+        android:elevation="10dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/cleanBlue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tvtextSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnForget" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

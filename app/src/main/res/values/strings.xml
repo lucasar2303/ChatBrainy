@@ -92,5 +92,6 @@
         <item>Email inválido</item>
         <item>Erro ao criar conta</item>
         <item>Cadastro realizado com sucesso</item>
+        <item>Erro ao logar o usuário</item>
     </string-array>
 </resources>
