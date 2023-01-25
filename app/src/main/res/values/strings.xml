@@ -82,4 +82,15 @@
     <string name="txtSignin">Já possui uma conta?</string>
     <string name="btnSignin">Entre aqui</string>
 
+    <!--    Error Messages-->
+    <string-array name="messages">
+        <item>Preencha todos os campos</item>
+        <item>As senhas não coincidem</item>
+        <item>Número inválido</item>
+        <item>Senhas precisam ter no mínimo 8 caracteres</item>
+        <item>Esta conta ja foi cadastrada</item>
+        <item>Email inválido</item>
+        <item>Erro ao criar conta</item>
+        <item>Cadastro realizado com sucesso</item>
+    </string-array>
 </resources>

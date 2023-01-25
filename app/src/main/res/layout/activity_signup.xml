@@ -111,7 +111,7 @@
         <com.santalu.maskara.widget.MaskEditText
             android:drawableStart="@drawable/ic_phone"
             android:drawablePadding="10dp"
-            android:id="@+id/etCelular"
+            android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hintphone"
@@ -191,11 +191,11 @@
 
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignupConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/btn_form_login"
         android:fontFamily="@font/noto_sans"
         android:text="@string/btnSignup"
@@ -238,5 +238,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvtextSignup" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignupConfirm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
