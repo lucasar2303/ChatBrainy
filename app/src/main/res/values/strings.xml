@@ -23,6 +23,8 @@
     <string name="about">Sobre</string>
     <string name="policy">Política de uso</string>
     <string name="help">Ajuda</string>
+    <string name="exit">Sair</string>
+    <string name="accountActive">Account Active</string>
 
     <!--    AboutFragment-->
     <string name="aboutText">

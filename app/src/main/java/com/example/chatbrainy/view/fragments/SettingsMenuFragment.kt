@@ -1,5 +1,6 @@
 package com.example.chatbrainy.view.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +9,15 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.*
 import com.example.chatbrainy.R
+import com.example.chatbrainy.view.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class SettingsMenuFragment : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
+    var db: FirebaseFirestore = FirebaseFirestore.getInstance()
+    var userId: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +30,13 @@ class SettingsMenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        userId = FirebaseAuth.getInstance().currentUser?.uid
+
+        var docRef: DocumentReference = db.collection("Users").document(userId!!)
+        docRef .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+            view?.findViewById<TextView>(R.id.tvAccount)?.text = querySnapshot?.getString("email")
+        }
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_settings_menu, container, false)
 //        view.findViewById<TextView>(R.id.tvAbout).setOnClickListener{
@@ -95,6 +107,13 @@ class SettingsMenuFragment : Fragment() {
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit()
 
+        }
+
+        view.findViewById<TextView>(R.id.tvExit).setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent (getActivity(), LoginActivity::class.java)
+            activity?.finishAffinity()
+            getActivity()?.startActivity(intent)
         }
 
 
