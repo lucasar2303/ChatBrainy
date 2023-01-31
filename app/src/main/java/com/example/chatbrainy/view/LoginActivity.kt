@@ -27,6 +27,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, SignupActivity::class.java))
         }
 
+        binding.btnForget.setOnClickListener{
+            startActivity(Intent(this, RecoveryPasswordActivity::class.java))
+        }
+
         binding.btnLogin.setOnClickListener{
             val email: String = binding.etEmail.text.toString()
             val password: String = binding.etPassword.text.toString()
@@ -42,15 +46,18 @@ class LoginActivity : AppCompatActivity() {
         val email: String = binding.etEmail.text.toString()
         val password: String = binding.etPassword.text.toString()
         var messages : Array<String> = resources.getStringArray(R.array.messages)
+        binding.btnLogin.isEnabled = false
+        binding.progressBar.visibility = View.VISIBLE
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener{task->
             if (task.isSuccessful){
-                binding.progressBar.visibility = View.VISIBLE
                 binding.tvError.text = ""
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
 
             }else{
+                binding.btnLogin.isEnabled = true
+                binding.progressBar.visibility = View.GONE
                 var error:String? = null
                 try {
                     throw task.exception!!

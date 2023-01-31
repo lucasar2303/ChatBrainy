@@ -5,10 +5,12 @@
     <string name="titleOnBoarding1">Vamos começar!</string>
     <string name="titleOnBoarding2">Como funciona?</string>
     <string name="titleOnBoarding3">Pergunte o que quiser</string>
+    <string name="titleOnBoarding4">Verifique a informação</string>
 
     <string name="textOnBoarding1">Pergunte o que quiser e espere uma resposta.</string>
     <string name="textOnBoarding2">A Inteligência Artificial interage de forma conversacional. O formato de diálogo permite que a IA responda a todo tipo de perguntas.</string>
-    <string name="textOnBoarding3">Faça qualquer tipo de pergunta! Desde correção gramatical, ideias para projetos, até explicação de códigos de programação.</string>
+    <string name="textOnBoarding3">Faça qualquer tipo de pergunta! Desde correção gramatical, ideias para projetos, até explicação de códigos de programação. </string>
+    <string name="textOnBoarding4">Antes de compartilhar qualquer informação criada por meio de Inteligência Artificial, verifique se ela é verdadeira. </string>
 
     <string name="nextOnBoarding1">Iniciar</string>
     <string name="nextOnBoarding2">Próximo</string>
@@ -32,7 +34,7 @@
 
     <!--    HelpFragment-->
     <string name="helptext">
-        Para melhor desempenho da ferramenta, aqui estão algumas dicas para se usar.\n\nSeja claro e objetivo com seu texto de entrada.\n\nUtilize pontuações e acentuação para que a Inteligência Artificial compreenda o que você quer dizer.\n\nAlgumas solicitações que aparentam ser mais complexas podem levar mais tempo até retornar a resposta.\n\nSempre confira se as informações são verdadeiras antes de compartilhar com alguém.\n\nNo caso de erros frequentes, entre em contato com o desenvolvedor.
+        Para melhor desempenho da ferramenta, aqui estão algumas dicas para se usar.\n\nSeja claro e objetivo com seu texto de entrada.\n\nUtilize pontuações e acentuação para que a Inteligência Artificial compreenda o que você quer dizer.\n\nAlgumas solicitações que aparentam ser mais complexas podem levar mais tempo até retornar a resposta.\n\nSempre confira se as informações são verdadeiras antes de compartilhar com alguém.\n\nNo caso de erros frequentes, entre em contato com o desenvolvedor.\n\nOs dados que a IA possui são interrompidos em 2021, então pode não ter conhecimento dos eventos atuais.
     </string>
 
     <!--    PolicyFragment-->
@@ -96,4 +98,8 @@
         <item>Cadastro realizado com sucesso</item>
         <item>Erro ao logar o usuário</item>
     </string-array>
+
+<!--    Recovery Activity-->
+    <string name="text_recovery">Insira o seu e-mail de cadastro e enviaremos instruções para você.</string>
+    <string name="btn_recovery">Enviar</string>
 </resources>

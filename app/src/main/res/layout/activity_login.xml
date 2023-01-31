@@ -65,7 +65,8 @@
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="10dp"
             android:inputType="textEmailAddress"
-            android:padding="15dp" />
+            android:padding="15dp"
+            android:textCursorDrawable="@drawable/cursor_edit_text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +97,8 @@
             android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="10dp"
             android:inputType="textPassword"
-            android:padding="15dp" />
+            android:padding="15dp"
+            android:textCursorDrawable="@drawable/cursor_edit_text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

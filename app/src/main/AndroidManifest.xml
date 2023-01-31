@@ -16,6 +16,13 @@
         android:theme="@style/Theme.ChatBrainy"
         tools:targetApi="31">
         <activity
+            android:name=".view.RecoveryPasswordActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.SignupActivity"
             android:exported="false">
             <meta-data

@@ -157,7 +157,7 @@ class MainActivity : AppCompatActivity() {
                         // Creating error item for list
                         var chatMessage = Chat()
                         chatMessage.response = false
-                        chatMessage.answer = "Erro ao encontrar resposta, tente novamente. Se continuar a ter essa mensagem, entre em contato com o desenvolvedor."
+                        chatMessage.answer = "Não foi possível completar a requisição, troque o modelo nas configurações de Chat e tente novamente. Se continuar a ter esse erro, entre em contato com o desenvolvedor."
 
                         // Adding item to list and updating recycler
                         items.add(chatMessage)

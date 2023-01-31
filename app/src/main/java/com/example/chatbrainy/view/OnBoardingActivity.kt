@@ -36,9 +36,10 @@ class OnBoardingActivity : AppCompatActivity() {
 
         val onBoardingData:MutableList<OnBoardingData> = ArrayList()
 
-        onBoardingData.add(OnBoardingData(resources.getString(R.string.titleOnBoarding1), resources.getString(R.string.textOnBoarding1), R.drawable.interrogation ))
-        onBoardingData.add(OnBoardingData(resources.getString(R.string.titleOnBoarding2), resources.getString(R.string.textOnBoarding2), R.drawable.ia))
-        onBoardingData.add(OnBoardingData(resources.getString(R.string.titleOnBoarding3), resources.getString(R.string.textOnBoarding3), R.drawable.talkto))
+        onBoardingData.add(OnBoardingData(resources.getString(R.string.titleOnBoarding1), resources.getString(R.string.textOnBoarding1), R.drawable.onboarding1 ))
+        onBoardingData.add(OnBoardingData(resources.getString(R.string.titleOnBoarding2), resources.getString(R.string.textOnBoarding2), R.drawable.onboarding2))
+        onBoardingData.add(OnBoardingData(resources.getString(R.string.titleOnBoarding4), resources.getString(R.string.textOnBoarding4), R.drawable.onboarding3))
+        onBoardingData.add(OnBoardingData(resources.getString(R.string.titleOnBoarding3), resources.getString(R.string.textOnBoarding3), R.drawable.onboarding4))
 
         setOnBoardingViewPagerAdapter(onBoardingData)
 
